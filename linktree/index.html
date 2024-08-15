@@ -60,43 +60,61 @@
         .tiktok-button:hover {
             background-color: #18cedb; /* Darker green on hover */
         }
+    /* Sorts elements vertically downwards */
+    .sort-down {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Sorts elements horizontally to the right */
+    .sort-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* Aligns items to the start (left to right) */
+    }
+
+    /* Sorts elements horizontally to the left (reverse order) */
+    .sort-left {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end; /* Aligns items to the end (right to left) */
+    }
     </style>
 </head>
 <body>
-<center>
 <h1>MrTomiCZ's Linktree</h1>
 
-    <button class="github-button" onclick="window.location.href='https://github.com/MrTomiCZ'">
+    <button class="github-button sort-left" onclick="window.location.href='https://github.com/MrTomiCZ'">
         GitHub
     </button>
 <p>
 </p>
-    <button class="large-button" onclick="window.location.href='https://wa.me/+420722574833'">
+    <button class="large-button sort-right" onclick="window.location.href='https://wa.me/+420722574833'">
         WhatsApp
     </button>
 <p>
 </p>
-    <button class="discord-button" onclick="alert('My discord username is mrtomicz')">
+    <button class="discord-button sort-right" onclick="alert('My discord username is mrtomicz')">
         Discord
     </button>
     <p>
     </p>
-        <button class="large-button" onclick="window.location.href='https://frdomains.ddns.net'">
+        <button class="large-button sort-down" onclick="window.location.href='https://frdomains.ddns.net'">
             Check out FrDomains
         </button>
 <p>
 </p>
-            <button class="large-button" onclick="window.location.href='https://open.spotify.com/user/8gdq06icp5nkpmjp1f7pkpav8'">
+            <button class="large-button sort-left" onclick="window.location.href='https://open.spotify.com/user/8gdq06icp5nkpmjp1f7pkpav8'">
                 Spotify
             </button>
     <p>
     </p>
-        <button class="tiktok-button" onclick="window.location.href='https://tiktok.com/@mrtomicz'">
+        <button class="tiktok-button sort-left" onclick="window.location.href='https://tiktok.com/@mrtomicz'">
             TikTok
         </button>
 <p>
 </p>
-        <button class="github-button" onclick="window.location.href='mailto:mrtomi@mrtomi.ddns.net'">
+        <button class="github-button sort-left" onclick="window.location.href='mailto:mrtomi@mrtomi.ddns.net'">
             Email (mrtomi@mrtomi.ddns.net)
         </button>
 </center>
