@@ -23,9 +23,21 @@
 <h1>How to install Chrome Remote Desktop on Cloud Shell</h1>
 <p>So first, you need to open up <a href="https://shell.cloud.google.com/?show=terminal">Cloud Shell</a></p>
 <p>After you opened it, follow these steps:</p>
-<p>wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb</p>
+    <div class="copy">
+        <p id="textToCopy">wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb</p>
+        <button onclick="copyToClipboard()">📋</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
 <p>That downloaded the Chrome Remote Desktop thing, so now we install it,</p>
-    <div class="copy-install">
+    <div class="copy">
         <p id="textToCopy">sudo apt install ./chrome-remote-desktop_current_amd64.deb</p>
         <button onclick="copyToClipboard()">📋</button>
     </div>
@@ -38,6 +50,66 @@
             });
         }
     </script>
+<p>Now, we install XFCE (its possible it works with gnome too, i didnt try it)</p>
+    <div class="copy">
+        <p id="textToCopy">sudo DEBIAN_FRONTEND=noninteractive \
+    apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver</p>
+        <button onclick="copyToClipboard()">📋</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
+<p>Okay, so now, we do this</p>
+    <div class="copy">
+        <p id="textToCopy">sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'</p>
+        <button onclick="copyToClipboard()">📋</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
+<p>Open <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> and click install via ssh</p>
+<p>That's everything. Open up the connect page on remote desktop and its there. You can install chrome if you want to</p>
+    <div class="copy">
+        <p id="textToCopy">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</p>
+        <button onclick="copyToClipboard()">📋</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
+    <div class="copy">
+        <p id="textToCopy">sudo apt install ./google-chrome-stable_current_amd64.deb</p>
+        <button onclick="copyToClipboard()">📋</button>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
+<p>Note: it will not stay turned on and almost everything will be deleted after session ends, and i know that the user home folder stays.</p>
+<p>If you have any problems or questions, message me on discord (@mrtomicz) or email (<a href="mailto:mrtomi@mrtomi.ddns.net">mrtomi@mrtomi.ddns.net</a>)</p>
+<p>Thanks for reading! Credit: <a href="https://www.youtube.com/watch?v=2mnrHY_7p6w">https://www.youtube.com/watch?v=2mnrHY_7p6w</a></p>
 </center>
 </body>
 </html>
