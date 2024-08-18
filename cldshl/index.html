@@ -8,7 +8,22 @@
 <body>
 <center>
 <h1>How to install Chrome Remote Desktop on Cloud Shell</h1>
-<p>So first, you need to open up <a href="https://shell.cloud.google.com">Cloud Shell</a></p>
+<p>So first, you need to open up <a href="https://shell.cloud.google.com/?show=terminal">Cloud Shell</a></p>
+<p>After you opened it, follow these steps:</p>
+<p>wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb</p>
+<p>That downloaded the Chrome Remote Desktop thing, so now we install it,</p>
+<p></p>
+ <p id="textToCopy">sudo apt install ./chrome-remote-desktop_current_amd64.deb</p>
+    <button onclick="copyToClipboard()">📋</button>
+
+    <script>
+        function copyToClipboard() {
+            var textToCopy = document.getElementById("textToCopy").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                console.log("copied");
+            });
+        }
+    </script>
 </center>
 </body>
 </html>
