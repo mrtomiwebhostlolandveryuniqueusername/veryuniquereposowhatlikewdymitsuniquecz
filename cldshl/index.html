@@ -24,79 +24,39 @@
 <p>So first, you need to open up <a href="https://shell.cloud.google.com/?show=terminal">Cloud Shell</a></p>
 <p>After you opened it, follow these steps:</p>
     <div class="copy">
-        <p id="textToCopy">wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <p id="textToCopy1">wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb</p>
+        <button onclick="copyToClipboard('textToCopy1')">📋</button>
     </div>
 
-    <script>
-        function copyToClipboard() {
-            var textToCopy = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                console.log("copied");
-            });
-        }
-    </script>
 <p>That downloaded the Chrome Remote Desktop thing, so now we install it,</p>
     <div class="copy">
-        <p id="textToCopy">sudo apt install ./chrome-remote-desktop_current_amd64.deb</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <p id="textToCopy2">sudo apt install ./chrome-remote-desktop_current_amd64.deb</p>
+        <button onclick="copyToClipboard('textToCopy2')">📋</button>
     </div>
 
-    <script>
-        function copyToClipboard() {
-            var textToCopy = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                console.log("copied");
-            });
-        }
-    </script>
 <p>Now, we install XFCE (its possible it works with gnome too, i didnt try it)</p>
     <div class="copy">
-        <p id="textToCopy">sudo DEBIAN_FRONTEND=noninteractive \
+        <p id="textToCopy3">sudo DEBIAN_FRONTEND=noninteractive \
     apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <button onclick="copyToClipboard('textToCopy3')">📋</button>
     </div>
 
-    <script>
-        function copyToClipboard() {
-            var textToCopy = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                console.log("copied");
-            });
-        }
-    </script>
 <p>Okay, so now, we do this</p>
     <div class="copy">
-        <p id="textToCopy">sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <p id="textToCopy4">sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'</p>
+        <button onclick="copyToClipboard('textToCopy4')">📋</button>
     </div>
 
-    <script>
-        function copyToClipboard() {
-            var textToCopy = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                console.log("copied");
-            });
-        }
-    </script>
 <p>Open <a href="https://remotedesktop.google.com">Chrome Remote Desktop</a> and click install via ssh</p>
 <p>That's everything. Open up the connect page on remote desktop and its there. You can install chrome if you want to</p>
     <div class="copy">
-        <p id="textToCopy">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <p id="textToCopy5">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</p>
+        <button onclick="copyToClipboard('textToCopy5')">📋</button>
     </div>
 
-    <script>
-        function copyToClipboard() {
-            var textToCopy = document.getElementById("textToCopy").innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                console.log("copied");
-            });
-        }
-    </script>
     <div class="copy">
-        <p id="textToCopy">sudo apt install ./google-chrome-stable_current_amd64.deb</p>
-        <button onclick="copyToClipboard()">📋</button>
+        <p id="textToCopy6">sudo apt install ./google-chrome-stable_current_amd64.deb</p>
+        <button onclick="copyToClipboard('textToCopy6')">📋</button>
     </div>
 
     <script>
